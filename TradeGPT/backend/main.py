@@ -15,7 +15,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     # Allow local frontend dev servers on any port (Vite, React dev server, etc.).
-    allow_origin_regex=r"https?://(localhost|127\.0\.0\.1)(:\d+)?",
+    allow_origin_regex=r"https://tradegpt-phi.vercel.app/",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
