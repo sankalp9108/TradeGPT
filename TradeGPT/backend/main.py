@@ -11,16 +11,13 @@ app = FastAPI(
     description="AI-powered stock market analysis and authentication system",
     version="1.0.0"
 )
-
 app.add_middleware(
     CORSMiddleware,
-    # Allow local frontend dev servers on any port (Vite, React dev server, etc.).
-    allow_origin_regex=r"https://tradegpt-phi.vercel.app/",
+    allow_origins=["https://tradegpt-phi.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 # Include all routers
 app.include_router(auth.router)
 app.include_router(stock_price.router)
