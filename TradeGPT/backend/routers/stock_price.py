@@ -9,13 +9,13 @@ from utils import verify_jwt_token
 
 load_dotenv()
 
-
+ALPHA_VANTAGE_API_KEY = os.getenv("ALPHA_VANTAGE_API_KEY")
 router = APIRouter()
 
 @tool
 def stock_price(company_name:str):
     '''gives real time stock price information with the input of company symbol like IBM '''
-    url = f'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={company_name}&apikey=AXMP1TVEXA0LDENG'
+    url = f'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={company_name}&apikey={ALPHA_VANTAGE_API_KEY}'
     r = requests.get(url)
     return str(r.json())
 
