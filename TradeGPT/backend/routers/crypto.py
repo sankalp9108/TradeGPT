@@ -11,7 +11,7 @@ load_dotenv()
 
 router = APIRouter()
 
-ALPHA_VANTAGE_API_KEY = "3EY963SEULER7BIR"
+ALPHA_VANTAGE_API_KEY = os.getenv("ALPHA_VANTAGE_API_KEY")
 BASE_URL = "https://www.alphavantage.co/query"
 
 
