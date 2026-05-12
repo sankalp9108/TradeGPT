@@ -6,7 +6,7 @@ from langchain_classic.agents import create_react_agent,AgentExecutor
 from langchain_core.prompts import PromptTemplate
 from fastapi import APIRouter, Depends
 from utils import verify_jwt_token
-
+import os
 load_dotenv()
 
 ALPHA_VANTAGE_API_KEY = os.getenv("ALPHA_VANTAGE_API_KEY")
