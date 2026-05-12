@@ -6,7 +6,7 @@ from langchain_core.prompts import PromptTemplate
 from langchain_core.tools import tool
 from langchain_google_genai import ChatGoogleGenerativeAI
 from utils import verify_jwt_token
-
+import os
 load_dotenv()
 
 router = APIRouter()
