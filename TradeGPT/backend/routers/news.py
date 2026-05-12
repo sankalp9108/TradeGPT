@@ -8,7 +8,7 @@ from fastapi import APIRouter, Depends
 import requests
 from typing import Optional, Dict
 from utils import verify_jwt_token
-
+import os 
 load_dotenv()
 
 router = APIRouter()
